@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /unsubscribe*
+Disallow: /login*
+Disallow: /newsFeedContent*
+Disallow: /blogFeedContent*
+Disallow: /randomGalleryView*
+Disallow: /images/favicons*
+Disallow: /images/*.png
+Disallow: /images/*.gif
+Disallow: /mail-id-instructions

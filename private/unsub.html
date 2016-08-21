@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Success</title>
+</head>
+<body>
+    <style>
+        html,body
+        {
+            padding:0;
+            margin:0;
+        }
+        #feedback
+        {
+            height: 72px;
+            width: 90%;
+            resize:vertical;
+        }
+        #send
+        {
+            font-family: Verdana;
+            width: 90%;
+        }
+        #panel
+        {
+            width: 760px;
+            height:100%;
+            margin-top:0;
+            margin-bottom:0;
+            margin-left:auto;
+            margin-right:auto;
+            padding:20px;
+            background-color:rgba(0, 148, 255, 0.5);
+        }
+        body
+        {
+            font-family: sans-serif;
+        }
+    </style>
+    <script>
+        ( function ()
+        {
+            var id = ( /[\\?&]id=([^&#]*)/.exec( location.search ) )[0].substring( 4 );
+            $( document ).ready( function ()
+            {
+                var $send = $( "#send" ),
+                    $feedback = $( '#feedback' );
+                function checkEmpty()
+                {
+                    return $feedback.filter( function ()
+                    {
+                        return !$.trim( this.value );
+                    } ).length === 0;
+                }
+                $feedback.on( 'keyup blur', function ()
+                {
+                    $send.prop( "disabled", !checkEmpty() );
+                } ).keyup();
+                $( '#subForm' ).on( 'submit', function ( e )
+                {
+                    e.preventDefault();
+                    $( 'h2' ).html( 'Sending...' );
+                    var msg = {
+                        'feedback': $( "#feedback" ).val(),
+                    };
+                    $.ajax( {
+                        type: 'POST',
+                        url: '/unsubscribe',
+                        data: msg,
+                        success: function ( data )
+                        {
+                            if ( data == 'Ok' )
+                                $( 'h2' ).html( 'Sent' );
+                            else
+                                $( 'h2' ).html( data );
+                        },
+                        error: function ()
+                        {
+                            $( 'h2' ).html( 'Connection lost. Try again' );
+                        }
+                    } );
+                } );
+            } );
+        } )();
+    </script>
+    <div id="panel">
+        <form id="subForm">
+            <div>
+                <h2>
+                    Sad to see you go!
+                </h2>
+            </div>
+            <div>
+                Give us your valuable feedback so that we can improve ourselves in the future.
+            </div>
+            <textarea name="message" id="feedback" placeholder="Feedback"></textarea>
+            <div>
+                <input type="submit" id="send" name="send" class="button" value="Send" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿{{#each galleryImage}}
+<li>
+   <a class="clb-photo" href="https://d1asmq9pjfbzxs.cloudfront.net/images/gallery/{{this.name}}/{{this.number}}.jpg">
+      <img src="https://d1asmq9pjfbzxs.cloudfront.net/images/gallery/{{this.name}}/thumbs{{#if @root.mobile}}320{{/if}}/{{this.number}}.jpg" />
+   </a>
+</li>
+{{/each}}

@@ -1,0 +1,35 @@
+﻿<div class="blogpager">
+   {{#if prevno}}
+   <div class="previous"><a href="?pno={{prevno}}" class="button next-prev"><< Newer</a></div>
+   {{/if}}
+   {{#if nextno}}
+   <div class="next"><a href="?pno={{nextno}}" class="button next-prev">Older >></a></div>
+   {{/if}}
+</div>
+<hr />
+{{#each newspost}}
+<article class="post">
+   <figure>
+      <a href="{{this.location}}">
+         <img src="{{this.banner}}" />
+         <figcaption>
+            <h2>{{this.title}}</h2>
+            <div class="post-date">{{this.date}}</div>
+         </figcaption>
+      </a>
+   </figure>
+   <p>
+      {{this.desc}}
+      <a href="{{this.location}}">Read more...</a>
+   </p>
+</article>
+<hr />
+{{/each}}
+<div class="blogpager">
+   {{#if prevno}}
+   <div class="previous"><a href="?pno={{prevno}}" class="button next-prev"><< Newer</a></div>
+   {{/if}}
+   {{#if nextno}}
+   <div class="next"><a href="?pno={{nextno}}" class="button next-prev">Older >></a></div>
+   {{/if}}
+</div>

@@ -1,0 +1,22 @@
+module.exports = {
+    '/about': '/about.html',
+    '/cars': '/cars.html',
+    '/sponsors': '/sponsors.html',
+    '/blog/intro/chassis': '/posts/2015/8/chassis/index.html',
+    '/blog/intro/transmission': '/posts/2015/8/transmission/index.html',
+    '/blog/intro/cpr': '/posts/2015/8/cpr/index.html',
+    '/blog/intro/engine': '/posts/2015/8/engine/index.html',
+    '/blog/intro/electronics': '/posts/2015/8/electronics/index.html',
+    '/blog/intro/suspension': '/posts/2015/8/suspension/index.html',
+    '/blog/intro/what-we-do': '/posts/2015/8/intro/index.html',
+    '/blog/intro': '/posts/2015/8/index.html',
+    '/blog/the-sacrifices-we-make': '/posts/2015/6/akshat/index.html',
+    '/blog/intake-manifolds-and-organ-pipes': '/posts/2015/7/chatur/index.html',
+    '/blog/the-a-team': '/posts/2015/7/vyom/index.html',
+    '/blog/turbocharging-10002': '/posts/2016/4/turbo2/index.html',
+    '/blog/autumn-report-2016': '/posts/2016/1/report/index.html',
+    '/posts/fdc': '/posts/2015/5/fdc/index.html',
+    '/posts/jcb': '/posts/2015/5/jcb/index.html',
+    '/posts/alumni-meet-2016': '/posts/2016/1/alumni/index.html',
+    '/blog/turbochargers': '/posts/2016/4/turbochargers/index.html'
+}

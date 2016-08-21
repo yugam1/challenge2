@@ -1,0 +1,43 @@
+{
+  "name": "KART",
+  "version": "0.8.5",
+  "description": "KART NodeJS App",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.12.4",
+    "compression": "^1.4.4",
+    "connect-mongodb-session": "^1.1.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.12.0",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.13.0",
+    "mongodb": "^2.0.46",
+    "mongoose": "^4.4.17",
+    "newrelic": "^1.19.2",
+    "nodemailer": "^1.4.0",
+    "nodemailer-express-handlebars": "^2.0.0",
+    "nodemailer-html-to-text": "^2.1.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg": "^4.4.3",
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lithium-03/KART"
+  },
+  "keywords": [
+    "teamkart",
+    "fsae",
+    "iit",
+    "kgp"
+  ],
+  "license": "MIT"
+}
